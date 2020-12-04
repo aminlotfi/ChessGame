@@ -1,3 +1,7 @@
+package board;
+
+import pieces.Piece;
+
 public abstract class Tile {
 
     int tileCoordinate;
@@ -31,8 +35,9 @@ public abstract class Tile {
 
         Piece pieceOnTile;
 
-        public OccupiedTile(int tileCoordinate) {
+        public OccupiedTile(int tileCoordinate, Piece pieceOnTile) {
             super(tileCoordinate);
+            this.pieceOnTile = pieceOnTile;
         }
 
         @Override
